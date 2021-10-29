@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FBFAF5;
+    animation: transitionIn 0.55s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a {
+    color: #FBFAF5;
+    text-decoration: none;
+}
+h1 {
+  text-align: center;
+}
+
+li {
+  text-decoration: none;
+}
+form {
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+  padding: 1em;
+  border: 2px solid #000;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 50%;
+
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  background-color: #FBFAF5;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+
+
+.header {
+    background-color:#000;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: static;
+    width: 100%;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #FBFAF5;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FBFAF5;
+    text-align: center;
+
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.special {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin: 0px;
+}
+
+.special h3 {
+    margin: 50px 0px;
+}
+
+.individual {
+    text-align: center;
+    margin: 5px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.footer{
+  text-align: center;
+  background-color: #000;
+  color: #FBFAF5;
+  bottom: 0;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 48em) {
+    .header{
+      background: #000;
+      height: 60px;
+    }
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 10px 10px;
+    }
+
+    .header .logo {
+      font-size: 2em;
+    }
+    
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+
+    .photo img {
+      max-height: 500px;
+      object-fit:contain;
+  }
+
+    .faculty {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+
+    .faculty img {
+        object-fit: cover;
+    }
+
+    .contact {
+        margin: 20px;
+    }
+
+    .footer {
+      margin: 20px;
+      width: 97%
+    }
